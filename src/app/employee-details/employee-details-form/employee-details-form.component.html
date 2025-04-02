@@ -1,0 +1,62 @@
+<form #form="ngForm" (submit)="onSubmit(form)" [class.Submitted]="service.formSubmitted" novalidate>
+    <input type="hidden" name="id" [value]="service.formData.id"/>
+    <div class="mb-3">
+        <label>Employee Name</label>
+        <input class="form-control form-control-lg" placeholder="Name of Employee" type="text" 
+        #name="ngModel" name="name"
+        [(ngModel)]="service.formData.name" required/>
+    </div>
+    <div class="mb-3">
+        <label>Position</label>
+        <input class="form-control form-control-lg" placeholder="Position" type="text" 
+        #position="ngModel"  name="position"
+        [(ngModel)]="service.formData.position" required/>
+    </div>
+    <div class="mb-3">
+        <label>Salary</label>
+        <input class="form-control form-control-lg" placeholder="Salary" type="text" 
+        #salary="ngModel"  name="salary"
+        [(ngModel)]="service.formData.salary" required/>
+    </div>
+    <div class="mb-3">
+        <label>City</label>
+        <input class="form-control form-control-lg" placeholder="City" type="text" 
+        #city="ngModel" name="city"
+        [(ngModel)]="service.formData.city" required/>
+    </div>
+    <div class="mb-3">
+        <label>State</label>
+        <input class="form-control form-control-lg" placeholder="State" type="text" 
+        #state="ngModel" name="state"
+        [(ngModel)]="service.formData.state" required/>
+    </div>
+    <div class="mb-3">
+        <label>Street</label>
+        <input class="form-control form-control-lg" placeholder="Street" type="text" 
+        #street="ngModel" name="street"
+        [(ngModel)]="service.formData.street" required/>
+    </div>
+    <div class="mb-3">
+        <label>Zip Code</label>
+        <input class="form-control form-control-lg" placeholder="zipCode" type="text" 
+        #zipCode="ngModel" name="zipCode"
+        [(ngModel)]="service.formData.zipCode" required/>
+    </div>
+    <div class="mb-3">
+        <label>Department Id</label>
+        <input class="form-control form-control-lg" placeholder="departmentId" type="text" 
+        #departmentId="ngModel" name="departmentId"
+        [(ngModel)]="service.formData.departmentId" required/>
+    </div>
+    <div class="mb-3">
+        <label>Department Name</label>
+        <input class="form-control form-control-lg" placeholder="departmentName" type="text" 
+        #street="ngModel" name="departmentName"
+        [(ngModel)]="service.formData.departmentName" required/>
+    </div>
+    <div class="d-grid">
+        <button class="btn btn-lg btn-success" type="submit">
+            Submit
+        </button>
+    </div>
+</form>

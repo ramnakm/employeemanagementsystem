@@ -1,0 +1,23 @@
+<div class="bg-body-secondary text-center py-5 rounded-2">
+    <h1 class="display-6 fw-bold">Employee Details Register</h1>
+</div>
+<div class="row mt-5">
+    <div class="col-6">
+        <app-employee-details-form/>
+    </div>
+    <div class="col-6">
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-start mb-2 border px-4 py-3 rounded-3" 
+            *ngFor="let ed of service.listEmployees">
+                <div class="flex-grow-1 mouse-hover" (click)="populateForm(ed)">
+                    <div class="fw-bold">
+                        {{ed.name}}
+                    </div>
+                </div>
+                <span class="text-secondary">
+                    <i class="fa-solid fa-trash-can mouse-hover" (click)="onDelete(ed.id)"></i>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
