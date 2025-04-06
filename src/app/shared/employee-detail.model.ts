@@ -6,7 +6,7 @@ export class EmployeeDetail {
 
     "position":string = ""
 
-    "salary":number = 0
+    "salary":number
 
     "city":string = ""
 

@@ -9,7 +9,7 @@ form input {
 form input::placeholder{
     color:#c0bdbd;
     font-weight: 300;
-    font-size:medium;
+    font-size: 13px;
 }
 
 form.submitted input.ng-invalid{

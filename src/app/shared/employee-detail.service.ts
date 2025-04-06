@@ -23,8 +23,7 @@ export class EmployeeDetailService {
 
   putEmployeeDetail(){
     const payload = this.transformToPostPayload(this.formData);
-    this.url = this.url + "/" + this.formData.id;
-    return this.http.put(this.url,payload);
+    return this.http.put(this.url + "/" + this.formData.id,payload);
   }
 
   deleteEmployeeDetail(id: string){
@@ -43,7 +42,7 @@ export class EmployeeDetailService {
 
   getEmployeeDetails(): Observable<EmployeeDetail[]> {
     return this.http.get<any[]>(this.url).pipe(
-      map(json => this.transformToEmployeeDetail(json))
+      map(ed => this.transformToEmployeeDetail(ed))
     );
   }
 
